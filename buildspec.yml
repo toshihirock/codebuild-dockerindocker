@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo 'prebuild'
+  build:
+    commands:
+      - echo Build started on `date`
+      - docker run ubuntu:14.04 /bin/echo 'Hello world'
+  post_build:
+    commands:
+      - echo Build completed on `date`
